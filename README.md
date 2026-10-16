@@ -1,6 +1,6 @@
 # Belgian Day-Ahead Battery Dispatch Simulation
 
-**Verified result:** In a 2024 out-of-sample historical simulation, a 2 MWh / 1 MW battery scheduled from machine-learning price forecasts achieved a simulated realised contribution of **33,751.14 EUR** after modelled wear, compared with 33,340.01 EUR using a same-hour-yesterday forecast under identical assumptions.
+**Verified result:** In a 2024 out-of-sample historical simulation, a 2 MWh / 1 MW battery scheduled from machine-learning price forecasts achieved a simulated realised contribution of **33,751.14 EUR** after modelled wear, compared with 33,340.01 EUR using a same-hour-yesterday forecast under identical assumptions. A perfect-foresight schedule under the same assumptions would have earned 45,932.84 EUR, so the ML forecast captured about 73.5% of that upper bound.
 
 ## Problem
 Electricity storage earns value by shifting energy from low-price to high-price hours, but real decisions must be made before prices are known. This project tests how forecasting, constrained optimisation and fair evaluation fit together.
