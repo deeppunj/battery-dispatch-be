@@ -1,4 +1,5 @@
-strategy,realised_contribution_eur
-No action,0.0
-Same hour yesterday forecast dispatch,33340.01
-ML forecast dispatch,33751.14
+strategy,realised_contribution_eur,share_of_perfect_foresight
+No action,0.0,0.0
+Same hour yesterday forecast dispatch,33340.01,0.7258
+ML forecast dispatch,33751.14,0.7348
+Perfect foresight (upper bound),45932.84,1.0

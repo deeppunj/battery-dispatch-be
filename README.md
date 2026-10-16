@@ -31,6 +31,9 @@ Capacity 2 MWh; power 1 MW; SoC 0.2-1.8 MWh; 92% one-way charge and discharge ef
 | No action | 0.00 EUR |
 | Same-hour-yesterday forecast dispatch | 33,340.01 EUR |
 | ML forecast dispatch | 33,751.14 EUR |
+| Perfect foresight (upper bound) | 45,932.84 EUR |
+
+Perfect foresight runs the same daily optimiser with the realised prices as the forecast, so it is an upper bound for these battery assumptions, not an achievable strategy. The ML forecast captured 73.48% of it and the same-hour-yesterday forecast 72.58%, so the ML gain over the simple benchmark is about 0.9 percentage points of that ceiling.
 
 ML dispatch: purchases 51,742.92 EUR, sales 89,939.60 EUR, wear 4,445.54 EUR. All 366 daily solves were optimal; SoC stayed within 0.2-1.8 MWh and terminal SoC matched 0.8 MWh to numerical tolerance.
 
