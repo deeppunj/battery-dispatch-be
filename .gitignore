@@ -8,3 +8,8 @@ __pycache__/
 
 # Large raw/derived datasets are not committed
 data/
+.idea/
+
+# Power BI data and report: the .pbix holds a copy of the ENTSO-E day-ahead prices, which are not on the free re-use list
+powerBi/*.csv
+powerBi/*.pbix

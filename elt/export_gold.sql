@@ -1,0 +1,12 @@
+-- Step 5 of the pipeline: export the gold table to a CSV file for Power BI.
+-- Run from the repository root:  psql -d battery_dispatch -f elt/export_gold.sql
+--
+-- \copy is a psql command, not normal SQL. It writes the result of a query into a file
+-- on your own computer. The path is relative to the folder where you run the command,
+-- so run it from the repository root. The powerBi folder must exist.
+-- CSV HEADER means: a comma-separated file with the column names on the first line.
+--
+-- ts_utc AT TIME ZONE 'UTC' writes the time as plain text like 2015-01-05 00:00:00
+-- (always UTC), which Power BI reads as a normal date and time.
+-- \copy has to stay on one line.
+\copy (SELECT ts_utc AT TIME ZONE 'UTC' AS ts_utc, price_eur_per_mwh, total_load_mw, quarter_hours FROM hourly_price_and_load ORDER BY ts_utc) TO 'powerBi/hourly_price_and_load.csv' CSV HEADER
